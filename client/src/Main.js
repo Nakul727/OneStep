@@ -4,6 +4,8 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home.js';
 import Login from './pages/Login.js';
 import Register from './pages/Register.js';
+import Dashboard from './pages/Dashboard.js';
+
 import Checklist from './pages/Checklist.js';
 
 export default function Main() {
@@ -12,6 +14,7 @@ export default function Main() {
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
+      <Route path='/dashboard' element={<Dashboard />}></Route>
       <Route path="/checklist" element={<Checklist />} />
     </Routes>
   );

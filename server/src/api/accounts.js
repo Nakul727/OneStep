@@ -95,7 +95,7 @@ router.post('/register', async (req, res) => {
   }
 });
 
-router.post('/auth', async (req, res) => {
+router.post('/login', async (req, res) => {
   password = req.body.password;
   email = req.body.email;
 
