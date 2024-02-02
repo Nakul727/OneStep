@@ -1,4 +1,6 @@
 const { Pool } = require('pg');
+const pgp = require('pg-promise')();
+const db = pgp('postgres://test:test_p@localhost:5432/onestep');
 
 const pool = new Pool({
   user: 'test',
@@ -10,4 +12,5 @@ const pool = new Pool({
 
 module.exports = {
   query: (text, params) => pool.query(text, params),
+  db
 };
