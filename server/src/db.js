@@ -5,7 +5,7 @@ const pool = new Pool({
   pass: 'test_p',
   host: 'localhost',
   port: 5432,
-  database: 'onestep',
+  database: 'OneStep',
 });
 
 module.exports = {
