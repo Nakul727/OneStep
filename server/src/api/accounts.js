@@ -1,8 +1,7 @@
 const bcrypt = require('bcrypt');
-const pgp = require('pg-promise')();
 const jwt = require('jsonwebtoken');
-const db = pgp('postgres://test:test_p@localhost:5432/onestep');
 const tokens = require('../utils/tokens');
+const { db } = require('../db.js');
 
 const express = require('express');
 const router = express.Router();
