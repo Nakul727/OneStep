@@ -1,9 +1,18 @@
 import React from 'react';
+import { Header, Footer } from '../components/index.js';
+import { RegisterForm } from '../components/index.js';
 
 const Register = (props) => {
   return (
     <div>
-      <p>Register Page</p>
+      <Header />
+      
+      <div>      
+        <p>Welcome to the Register page</p>
+        <RegisterForm />
+      </div>
+
+      <Footer />
     </div>
   );
 };

@@ -6,6 +6,6 @@ const Checklist = () => {
       <h1>Hello From Dashboard!</h1>
     </div>
   );
-}
+};
 
 export default Checklist;

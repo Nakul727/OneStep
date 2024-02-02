@@ -1,9 +1,18 @@
 import React from 'react';
+import { Header, Footer } from '../components/index.js';
+import { LoginForm } from '../components/index.js';
 
 const Login = (props) => {
   return (
     <div>
-      <p>Login Page</p>
+      <Header />
+
+      <div>      
+        <p>Welcome to the login page</p>
+        <LoginForm />
+      </div>
+      
+      <Footer />
     </div>
   );
 };
