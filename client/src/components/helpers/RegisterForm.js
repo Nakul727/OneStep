@@ -9,7 +9,8 @@ const RegisterForm = () => {
 
   const registerUser = async (event) => {
     event.preventDefault();
-    const backendApi = process.env.REACT_APP_BACKEND;
+    // const backendApi = process.env.REACT_APP_BACKEND;
+    const backendApi = 'http://localhost:8080';
     const response = await fetch(`${backendApi}/api/accounts/register`, {
       mode: 'cors',
       method: 'POST',
@@ -20,9 +21,23 @@ const RegisterForm = () => {
     });
 
     if (response.ok) {
-      navigate('/login');
+      const nextResponse = await fetch(`${backendApi}/api/accounts/login`, {
+        mode: 'cors',
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email: email, password: password })
+      });
+      if(nextResponse.ok) {
+        const data = await nextResponse.json();
+        localStorage.setItem('jwt', data.token);
+        navigate('/dashboard');
+      } else {
+        navigate('/login');
+      }
     } else {
-      console.error('Registration failed');
+      console.error(response);
     }
   };
 

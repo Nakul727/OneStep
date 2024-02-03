@@ -126,7 +126,7 @@ router.post('/login', async (req, res) => {
     // log in if successful
     // TODO - create secret value
     const accessToken = jwt.sign(account, secret);
-    res.status(200).json({ accessToken: accessToken });
+    res.status(200).json({ token: accessToken });
     return;
   } catch (err) {
     console.log(err);
