@@ -1,14 +1,18 @@
 import React from 'react';
 import { Header, Footer } from '../components/index.js';
 
-const Home = (props) => {
+const Dashboard = (props) => {
   return (
     <div>
       <Header />
-      <p>Hello! Welcome to OneStep</p>
+
+      <div>      
+        <p>Welcome to the DashBoard</p>
+      </div>
+      
       <Footer />
     </div>
   );
 };
 
-export default Home;
+export default Dashboard;
