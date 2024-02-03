@@ -38,12 +38,12 @@ const HabitTracker = () => {
             <Modal isOpen={isModalOpen} onRequestClose={handleCloseModal}>
               <AddHabitForm onClose={handleCloseModal} />
             </Modal>
-
-            <div className="columns-2">
-              <div>
+            
+            <div className="flex">
+              <div className="w-1/2">
                 <HabitInfo />
               </div>
-              <div>
+              <div className="w-1/2">
                 <HabitVisualization />
               </div>
             </div>

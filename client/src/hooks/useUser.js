@@ -8,6 +8,7 @@ const useUser = () => {
     const token = localStorage.getItem('jwt');
     if (token) {
       const decodedUser = jwtDecode(token);
+      console.log(decodedUser)
       setUser(decodedUser);
     }
   }, []);

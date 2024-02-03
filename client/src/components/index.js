@@ -11,7 +11,8 @@ import LoginForm from './helpers/LoginForm.js';
 import RegisterForm from './helpers/RegisterForm.js';
 import JournalHelper from './helpers/JournalHelper.js';
 import AddHabitForm from './helpers/AddHabitForm.js';
-import { HabitInfo, HabitVisualization } from './helpers/HabitsHelpers.js';
+import HabitInfo from './helpers/HabitInfo.js';
+import HabitVisualization from './helpers/HabitVisualization.js';
 
 export {
   Header,

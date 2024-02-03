@@ -4,5 +4,6 @@
 // name - useExample.js
 
 import useUser from './useUser';
+import useHabits from './useHabits'
 
-export { useUser };
+export { useUser, useHabits };

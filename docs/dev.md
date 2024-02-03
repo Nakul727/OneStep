@@ -21,7 +21,6 @@ CREATE DATABASE OneStep;
 
 CREATE TABLE Users (
     id          SERIAL PRIMARY KEY,
-    
     name        VARCHAR(25) NOT NULL,
     email       VARCHAR(100) NOT NULL,
     password    VARCHAR(72) NOT NULL
@@ -29,7 +28,7 @@ CREATE TABLE Users (
 
 CREATE TABLE habits (
   id            SERIAL PRIMARY KEY,
-
+  user_id       INTEGER NOT NULL,
   habit_name    VARCHAR(255) NOT NULL,
   start_date    DATE NOT NULL,
   end_date      DATE NOT NULL,
@@ -40,6 +39,14 @@ CREATE TABLE tasks (
   id            SERIAL PRIMARY KEY,
   name          VARCHAR(255) NOT NULL,
   message       TEXT
+);
+
+CREATE TABLE journals (
+  id          INTEGER NOT NULL,
+  userid      INTEGER,
+  title       CHARACTER VARYING(75),
+  description CHARACTER VARYING(300),
+  entries     INTEGER
 );
 
 ```

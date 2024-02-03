@@ -1,14 +1,18 @@
 import React, { useState } from 'react';
+import useUser from '../../hooks/useUser';
 
 const AddHabitForm = ({ onClose }) => {
   const [habitName, setHabitName] = useState('');
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
 
+  const user = useUser();
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     const habit = {
+      user_id: user.id,
       habit_name: habitName,
       start_date: startDate,
       end_date: endDate,
