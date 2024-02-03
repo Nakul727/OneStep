@@ -3,8 +3,24 @@ import React from 'react';
 const Header = () => {
   return (
     <div>
-      <header className="flex items-center justify-between">
-        <p className="text-3xl">Header Component</p>
+      <header className="flex items-center justify-between bg-slate-200 p-4">
+        <p className="ml-16">Logo</p>
+
+        <div className="flex">
+          <a href="/journal" className="mx-8">
+            Journal
+          </a>
+          <a href="/habit_tracker" className="mx-8">
+            Habit Tracker
+          </a>
+          <a href="/todo" className="mx-8">
+            Todo
+          </a>
+        </div>
+
+        <a href="/dashboard" className="mr-16">
+          Profile
+        </a>
       </header>
     </div>
   );

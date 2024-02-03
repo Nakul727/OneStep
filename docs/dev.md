@@ -20,9 +20,20 @@ Database:
 CREATE DATABASE OneStep;
 
 CREATE TABLE Users (
-    id SERIAL PRIMARY KEY,
-    name VARCHAR(25) NOT NULL,
-    email VARCHAR(100) NOT NULL,
-    password VARCHAR(72) NOT NULL
+    id          SERIAL PRIMARY KEY,
+    
+    name        VARCHAR(25) NOT NULL,
+    email       VARCHAR(100) NOT NULL,
+    password    VARCHAR(72) NOT NULL
 );
+
+CREATE TABLE habits (
+  id            SERIAL PRIMARY KEY,
+
+  habit_name    VARCHAR(255) NOT NULL,
+  start_date    DATE NOT NULL,
+  end_date      DATE NOT NULL,
+  completed     BOOLEAN DEFAULT false
+);
+
 ```

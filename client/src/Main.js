@@ -15,9 +15,9 @@ export default function Main() {
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
-      <Route path='/dashboard' element={<Dashboard />} />
+      <Route path="/dashboard" element={<Dashboard />} />
 
-      <Route path='/habit_tracker' element={<HabitTracker />} />
+      <Route path="/habit_tracker" element={<HabitTracker />} />
       <Route path="/checklist" element={<Checklist />} />
     </Routes>
   );

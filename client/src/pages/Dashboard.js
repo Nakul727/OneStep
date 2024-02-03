@@ -6,10 +6,10 @@ const Dashboard = (props) => {
     <div>
       <Header />
 
-      <div>      
+      <div>
         <p>Welcome to the DashBoard</p>
       </div>
-      
+
       <Footer />
     </div>
   );
