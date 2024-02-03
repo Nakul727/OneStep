@@ -7,11 +7,11 @@ const Login = (props) => {
     <div>
       <Header />
 
-      <div>      
+      <div>
         <p>Welcome to the login page</p>
         <LoginForm />
       </div>
-      
+
       <Footer />
     </div>
   );

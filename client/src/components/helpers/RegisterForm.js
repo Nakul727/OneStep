@@ -14,9 +14,9 @@ const RegisterForm = () => {
       mode: 'cors',
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ name: username, email: email, password: password })
+      body: JSON.stringify({ name: username, email: email, password: password }),
     });
 
     if (response.ok) {
@@ -28,10 +28,30 @@ const RegisterForm = () => {
 
   return (
     <form onSubmit={registerUser}>
-      <input className='flex' type="text" value={username} onChange={e => setUsername(e.target.value)} placeholder="Username" />
-      <input className='flex' type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email" />
-      <input className='flex' type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Password" />
-      <button className="bg-slate-300 p-4" type="submit">Register</button>
+      <input
+        className="flex"
+        type="text"
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
+        placeholder="Username"
+      />
+      <input
+        className="flex"
+        type="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        placeholder="Email"
+      />
+      <input
+        className="flex"
+        type="password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+        placeholder="Password"
+      />
+      <button className="bg-slate-300 p-4" type="submit">
+        Register
+      </button>
     </form>
   );
 };

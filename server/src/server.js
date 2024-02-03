@@ -24,7 +24,7 @@ app.get('/test', authenticateToken, async (req, res, next) => {
   } catch (err) {
     console.log(err);
   }
-    hello
+  hello;
 });
 
 app.listen(8080, () => {
