@@ -6,8 +6,8 @@ const Register = (props) => {
   return (
     <div>
       <Header />
-      
-      <div>      
+
+      <div>
         <p>Welcome to the Register page</p>
         <RegisterForm />
       </div>

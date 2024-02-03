@@ -14,7 +14,7 @@ const Dashboard = (props) => {
       <div>      
         <p>Welcome to the DashBoard, {name}</p>
       </div>
-      
+
       <Footer />
     </div>
   );

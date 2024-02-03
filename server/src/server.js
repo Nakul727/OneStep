@@ -1,12 +1,15 @@
 const express = require('express');
+const cors = require('cors');
 const db = require('./db');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const secret = 'secret_phrase';
 
 const { authenticateToken } = require('./utils/tokens');
+
 const accounts = require('./api/accounts');
 const journals = require('./api/journals');
+const habits = require('./api/habits');
 
 app = express();
 
@@ -15,6 +18,8 @@ app.use(bodyParser.json());
 
 app.use('/api/accounts', accounts);
 app.use('/api/journals', journals);
+app.use('/api/habits', habits);
+
 app.use(authenticateToken);
 
 async function validateToken (req, res, next) {
@@ -44,7 +49,7 @@ app.get('/test', authenticateToken, async (req, res, next) => {
   } catch (err) {
     console.log(err);
   }
-    hello
+  hello;
 });
 
 app.listen(8080, () => {
