@@ -8,5 +8,6 @@ import Footer from './common/Footer.js';
 
 import LoginForm from './helpers/LoginForm.js';
 import RegisterForm from './helpers/RegisterForm.js';
+import JournalHelper from './helpers/JournalHelper.js';
 
-export { Header, Footer, LoginForm, RegisterForm };
+export { Header, Footer, LoginForm, RegisterForm, JournalHelper };

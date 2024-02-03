@@ -1,20 +1,20 @@
 import React from 'react';
 import { Header, Footer } from '../components/index.js';
-import { RegisterForm } from '../components/index.js';
+import { JournalHelper } from '../components/index.js';
 
-const Register = (props) => {
+const JournalMaker = (props) => {
   return (
     <div>
       <Header />
-      
-      <div>      
-        <p>Welcome to the Register page</p>
-        <RegisterForm />
-      </div>
 
+      <div>      
+        <p>Journal Maker</p>
+        <JournalHelper />
+      </div>
+      
       <Footer />
     </div>
   );
 };
 
-export default Register;
+export default JournalMaker;

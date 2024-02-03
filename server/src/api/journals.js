@@ -3,11 +3,12 @@ const tokens = require('../utils/tokens');
 const express = require('express');
 const router = express.Router();
 const { db } = require('../db');
+const { authenticateToken } = require('../utils/tokens.js');
 
 //
 // helpers
 //
-async function verifyJournalTitle(title, userID) {
+async function verifyJournalTitle (title, userID) {
   try {
     result = await db.query('SELECT * FROM Journals WHERE title=$1 AND userID=$2', [title, userID])
     if(result.length > 0) {
@@ -23,7 +24,7 @@ async function verifyJournalTitle(title, userID) {
 //
 // routes
 //
-router.post('/post-journal', async (req, res) => {
+router.post('/post-journal', authenticateToken, async (req, res) => {
   try {
     if(!req.body) {
       res.status(400).json({ error: 'missing body' });
@@ -73,12 +74,12 @@ router.get('/get-journals', async(req, res) => {
     const { id } = req.body;
     db.query('SELECT * FROM Journals WHERE userid=$1', id)
       .then((value) => {
-        
+        res.status(200).write(JSON.strigify(value)); 
       })
       .catch();
     
   } catch(err) {
-
+    
   }
 });
 
@@ -113,7 +114,7 @@ router.post('/post-journal-entry', async (req, res) => {
       })
         
   } catch(err) {
-
+    res.status(500).json({ error: 'err' });
   }
 });
 

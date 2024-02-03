@@ -8,6 +8,7 @@ import Dashboard from './pages/Dashboard.js';
 
 import HabitTracker from './pages/HabitTracker.js';
 import Checklist from './pages/Checklist.js';
+import JournalMaker from './pages/JournalMaker';
 
 export default function Main() {
   return (
@@ -16,7 +17,7 @@ export default function Main() {
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path='/dashboard' element={<Dashboard />} />
-
+      <Route path='/journalmaker' element={<JournalMaker />} />
       <Route path='/habit_tracker' element={<HabitTracker />} />
       <Route path="/checklist" element={<Checklist />} />
     </Routes>

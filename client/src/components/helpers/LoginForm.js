@@ -8,7 +8,8 @@ const LoginForm = () => {
 
   const loginUser = async (event) => {
     event.preventDefault();
-    const backendApi = process.env.REACT_APP_BACKEND;
+    // const backendApi = process.env.REACT_APP_BACKEND;
+    const backendApi = 'http://localhost:8080';
     const response = await fetch(`${backendApi}/api/accounts/login`, {
       mode: 'cors',
       method: 'POST',
@@ -19,9 +20,12 @@ const LoginForm = () => {
     });
 
     if (response.ok) {
+      const data = await response.json();
+      localStorage.setItem('jwt', data.token);
+      console.log(data.token);
       navigate('/dashboard');
     } else {
-      console.error('Login failed');
+      console.error(response);
     }
   };
 
