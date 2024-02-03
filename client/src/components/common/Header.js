@@ -13,8 +13,8 @@ const Header = () => {
           <a href="/habit_tracker" className="mx-8">
             Habit Tracker
           </a>
-          <a href="/todo" className="mx-8">
-            Todo
+          <a href="/checklist" className="mx-8">
+            Checklist
           </a>
         </div>
 
