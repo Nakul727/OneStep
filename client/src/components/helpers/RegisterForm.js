@@ -25,11 +25,11 @@ const RegisterForm = () => {
         mode: 'cors',
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email: email, password: password })
+        body: JSON.stringify({ email: email, password: password }),
       });
-      if(nextResponse.ok) {
+      if (nextResponse.ok) {
         const data = await nextResponse.json();
         localStorage.setItem('jwt', data.token);
         navigate('/dashboard');

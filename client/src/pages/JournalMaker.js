@@ -1,17 +1,20 @@
 import React from 'react';
-import { Header, Footer } from '../components/index.js';
+import { Header, Footer, LoginButton } from '../components/index.js';
 import { JournalHelper } from '../components/index.js';
+import useUser from '../hooks/useUser';
 
 const JournalMaker = (props) => {
+  const user = useUser();
+
   return (
     <div>
       <Header />
 
-      <div>      
+      <div>
         <p>Journal Maker</p>
-        <JournalHelper />
+        {user ? <JournalHelper /> : <LoginButton />}
       </div>
-      
+
       <Footer />
     </div>
   );

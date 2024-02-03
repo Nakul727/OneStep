@@ -1,10 +1,13 @@
 import React from 'react';
+import logo from '../../assets/logo.png';
 
 const Header = () => {
   return (
     <div>
       <header className="flex items-center justify-between bg-slate-200 p-4">
-        <p className="ml-16">Logo</p>
+        <a href="/">
+          <img src={logo} alt="Logo" className="ml-16 w-32" />
+        </a>
 
         <div className="flex">
           <a href="/journalmaker" className="mx-8">
@@ -13,7 +16,7 @@ const Header = () => {
           <a href="/habit_tracker" className="mx-8">
             Habit Tracker
           </a>
-          <a href="/checklist" className="mx-8">
+          <a href="/checklist" className="ml-8 mr-20">
             Checklist
           </a>
         </div>

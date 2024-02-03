@@ -5,6 +5,7 @@
 
 import Header from './common/Header.js';
 import Footer from './common/Footer.js';
+import LoginButton from './common/LoginButton.js';
 
 import LoginForm from './helpers/LoginForm.js';
 import RegisterForm from './helpers/RegisterForm.js';
@@ -12,4 +13,14 @@ import JournalHelper from './helpers/JournalHelper.js';
 import AddHabitForm from './helpers/AddHabitForm.js';
 import { HabitInfo, HabitVisualization } from './helpers/HabitsHelpers.js';
 
-export { Header, Footer, LoginForm, RegisterForm, HabitInfo, HabitVisualization, JournalHelper, AddHabitForm };
+export {
+  Header,
+  Footer,
+  LoginButton,
+  LoginForm,
+  RegisterForm,
+  AddHabitForm,
+  HabitInfo,
+  HabitVisualization,
+  JournalHelper,
+};

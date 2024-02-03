@@ -1,19 +1,15 @@
 import React from 'react';
-import { Header, Footer } from '../components/index.js';
-import { jwtDecode } from 'jwt-decode';
+import { Header, Footer, LoginButton } from '../components/index.js';
+import useUser from '../hooks/useUser';
 
 const Dashboard = (props) => {
-  const token = localStorage.getItem('jwt');
-  const decodedUser = jwtDecode(token); 
-  const { name } = decodedUser;
-  console.log(decodedUser);
+  const user = useUser();
+
   return (
     <div>
       <Header />
 
-      <div>      
-        <p>Welcome to the DashBoard, {name}</p>
-      </div>
+      <div>{user ? <p>Welcome to the DashBoard, {user.name}</p> : <LoginButton />}</div>
 
       <Footer />
     </div>
