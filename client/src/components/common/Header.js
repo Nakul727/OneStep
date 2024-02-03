@@ -7,7 +7,7 @@ const Header = () => {
         <p className="ml-16">Logo</p>
 
         <div className="flex">
-          <a href="/journal" className="mx-8">
+          <a href="/journalmaker" className="mx-8">
             Journal
           </a>
           <a href="/habit_tracker" className="mx-8">
