@@ -1,3 +1,4 @@
 # OneStep
 
-Self improvement platform based on habit building
+![Logo](./assets/logo.png)
+
