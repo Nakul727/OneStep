@@ -2,7 +2,6 @@ const express = require('express');
 const cors = require('cors');
 const db = require('./db');
 const bodyParser = require('body-parser');
-const cors = require('cors');
 const secret = 'secret_phrase';
 
 const { authenticateToken } = require('./utils/tokens');
