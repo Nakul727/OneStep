@@ -1,11 +1,13 @@
 const express = require('express');
+const cors = require('cors');
 const db = require('./db');
 const bodyParser = require('body-parser');
-const cors = require('cors');
 
 const { authenticateToken } = require('./utils/tokens');
+
 const accounts = require('./api/accounts');
 const journals = require('./api/journals');
+const habits = require('./api/habits');
 
 app = express();
 
@@ -14,6 +16,8 @@ app.use(bodyParser.json());
 
 app.use('/api/accounts', accounts);
 app.use('/api/journals', journals);
+app.use('/api/habits', habits);
+
 app.use(authenticateToken);
 
 // test function

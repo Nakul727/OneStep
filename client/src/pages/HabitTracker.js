@@ -1,7 +1,54 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Modal from 'react-modal';
 
 import { Header, Footer } from '../components/index.js';
-import { HabitInfo, HabitVisualization } from '../components/index.js';
+import { AddHabitForm, HabitInfo, HabitVisualization } from '../components/index.js';
+
+Modal.setAppElement('#root');
+
+const HabitTracker = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
+  return (
+    <div>
+      <Header />
+
+      <div className="flex justify-between items-center px-12 py-4 bg-slate-100">
+        <p className="text-xl">HabitTracker</p>
+        <div>
+          <button className=" bg-white p-4 mr-4 border-2" onClick={handleOpenModal}>
+            Add Habit
+          </button>
+        </div>
+      </div>
+
+      <Modal isOpen={isModalOpen} onRequestClose={handleCloseModal}>
+        <AddHabitForm onClose={handleCloseModal} />
+      </Modal>
+
+      <div className="columns-2">
+        <div>
+          <HabitInfo />
+        </div>
+        <div>
+          <HabitVisualization />
+        </div>
+      </div>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default HabitTracker;
 
 // users can create a habit with a habit_name, durataion
 // each day the habit completiton is reset, if its between the duration of the habit existance
@@ -17,33 +64,3 @@ import { HabitInfo, HabitVisualization } from '../components/index.js';
 // each habit is displayed with a checbox as complete status
 // on each checkbox chnage the completeing is changed to true
 // on save changes, update is request is made to change the relevant stuff
-
-const HabitTracker = () => {
-  return (
-    <div>
-      <Header />
-
-      <div className="flex justify-between items-center px-12 py-4 bg-slate-100">
-        <p className="text-xl">HabitTracker</p>
-        <div>
-          <button className=" bg-slate-100 p-4 mr-4 ">Modify Habit</button>
-          <button className=" bg-slate-100 p-4 ">Add Habbit</button>
-        </div>
-      </div>
-
-      <div className="columns-2">
-        <div>
-          <HabitInfo />
-        </div>
-
-        <div>
-          <HabitVisualization />
-        </div>
-      </div>
-
-      <Footer />
-    </div>
-  );
-};
-
-export default HabitTracker;
