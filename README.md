@@ -1,9 +1,12 @@
 # OneStep
 
+
+
 ![Logo](./assets/logo.png)
 
-
-<h3 style="text-align: center;">🎖️ 3rd place Winner of JourneyHacks 2024 @ SFUSurge 🎖️</h3>
+<div align = "center">
+<h3>🎖️ 3rd place Winner of JourneyHacks 2024 @ SFUSurge 🎖️</h3>
+</div>
 
 ## Idea
 
